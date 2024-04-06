@@ -4,8 +4,8 @@ const fs = require('fs');
 const csvWriter = require('csv-writer').createObjectCsvWriter;
 
 const config = {
-    fileName: '6.csv',
-    url: 'https://tarrant.tx.networkofcare.org/pr/services/subcategory.aspx?cid=38932&k=Reentry+House+&tax=FF-1900'
+    fileName: '12.csv',
+    url: 'https://tarrant.tx.networkofcare.org/pr/services/subcategory.aspx?cid=38924&k=Water+Service+Payment+Assistance&tax=BV-8900.9300-950'
 };
 
 (async () => {
@@ -52,8 +52,8 @@ const config = {
 
             // Collect data from the page
             const providerData = await agencyPage.evaluate(() => {
-                let category = 'Reentry Services';
-                let subCategory = 'Reentry House ';
+                let category = 'Financial Services';
+                let subCategory = 'Water Service Payment Assistance';
                 let orgName = '';
                 let phone = '';
                 let email = '';
@@ -62,7 +62,7 @@ const config = {
                 let state = '';
                 let zip = '';
                 let website = '';
-                let keywords = 'Reentry Services, Reentry House ';
+                let keywords = 'Water Service Payment Assistance';
                 let description = '';
                 let source = currentPage;
 
